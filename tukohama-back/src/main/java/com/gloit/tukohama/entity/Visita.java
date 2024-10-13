@@ -1,0 +1,101 @@
+package com.gloit.tukohama.entity;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+public class Visita {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  private String ip;
+
+  @Temporal(TemporalType.TIMESTAMP)
+  private Date creado;
+  private String creador;
+  @Temporal(TemporalType.TIMESTAMP)
+  private Date modificado;
+  private String modificador;
+  @Temporal(TemporalType.TIMESTAMP)
+  private Date borrado;
+  private String borrador;
+
+  public Visita() {
+  }
+
+  public Visita(Long id, String ip, Date creado, String creador, Date modificado, String modificador, Date borrado, String borrador) {
+    this.id = id;
+    this.ip = ip;
+    this.creado = creado;
+    this.creador = creador;
+    this.modificado = modificado;
+    this.modificador = modificador;
+    this.borrado = borrado;
+    this.borrador = borrador;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getIp() {
+    return ip;
+  }
+
+  public void setIp(String ip) {
+    this.ip = ip;
+  }
+
+  public Date getCreado() {
+    return creado;
+  }
+
+  public void setCreado(Date creado) {
+    this.creado = creado;
+  }
+
+  public String getCreador() {
+    return creador;
+  }
+
+  public void setCreador(String creador) {
+    this.creador = creador;
+  }
+
+  public Date getModificado() {
+    return modificado;
+  }
+
+  public void setModificado(Date modificado) {
+    this.modificado = modificado;
+  }
+
+  public String getModificador() {
+    return modificador;
+  }
+
+  public void setModificador(String modificador) {
+    this.modificador = modificador;
+  }
+
+  public Date getBorrado() {
+    return borrado;
+  }
+
+  public void setBorrado(Date borrado) {
+    this.borrado = borrado;
+  }
+
+  public String getBorrador() {
+    return borrador;
+  }
+
+  public void setBorrador(String borrador) {
+    this.borrador = borrador;
+  }
+}
